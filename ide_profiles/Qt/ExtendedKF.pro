@@ -19,6 +19,7 @@ QMAKE_CXXFLAGS += -std=c++11 -Wall
 
 DESTDIR = ../
 
+INCLUDEPATH += ../../src
 
 SOURCES += \
     ../../src/FusionEKF.cpp \

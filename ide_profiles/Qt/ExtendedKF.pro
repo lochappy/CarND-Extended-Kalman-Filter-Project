@@ -24,8 +24,8 @@ INCLUDEPATH += ../../src
 SOURCES += \
     ../../src/FusionEKF.cpp \
     ../../src/kalman_filter.cpp \
-    ../../src/main.cpp \
-    ../../src/tools.cpp
+    ../../src/tools.cpp \
+    ../../src/main.cpp
 
 HEADERS += \
     ../../src/FusionEKF.h \

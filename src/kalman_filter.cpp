@@ -50,8 +50,9 @@ void KalmanFilter::UpdateEKF(const VectorXd &z) {
 
     VectorXd err = z - z_pred;
     //bound -PI <= err_theta <= PI
-    if (err(1) > PI)    err(1) = err(1) - 2*PI;
-    if (err(1) < -PI)   err(1) = err(1) + 2*PI;
+    err(1) =  err(1) - (2*M_PI)*floor((err(1) + M_PI) / (2 * M_PI));
+//    if (err(1) > PI)    err(1) = err(1) - 2*PI;
+//    if (err(1) < -PI)   err(1) = err(1) + 2*PI;
 
     correction(err);
 }
